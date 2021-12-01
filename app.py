@@ -32,7 +32,7 @@ def main():
             info = Login(name=name,email=email,password=password)
             db.session.add(info)
             db.session.commit()
-            testemail.sendto(email)
+            testemail.sendto(email,name)
 
         else:
             return render_template("index.html",flag=-1)
